@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Tạo layout với các thẻ HTML5 và CSS</title>
+    <style>
+        /* Reset margin và padding */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        /* Thẻ bao ngoài toàn bộ giao diện */
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        /* Định dạng Header */
+        header {
+            background-color: #e0e0e0;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #bbb;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        /* Định dạng Nav */
+        nav {
+            background-color: #e0e0e0;
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #bbb;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        /* Container chứa cột chính (Section/Article) và Cột bên (Aside) */
+        .main-content {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* Khối bên trái bao gồm Section và Article */
+        .content-left {
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        section {
+            background-color: #e0e0e0;
+            padding: 30px 20px;
+            border: 1px solid #bbb;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        article {
+            background-color: #e0e0e0;
+            padding: 30px 20px;
+            border: 1px solid #bbb;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* Khối bên phải (Aside) */
+        aside {
+            flex: 1;
+            background-color: #e0e0e0;
+            padding: 20px;
+            border: 1px solid #bbb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            min-height: 150px;
+        }
+
+        /* Định dạng Footer */
+        footer {
+            background-color: #e0e0e0;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #bbb;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Phần Header -->
+        <header>
+            &lt;header&gt;
+        </header>
+
+        <!-- Thanh điều hướng Nav -->
+        <nav>
+            &lt;nav&gt;
+        </nav>
+
+        <!-- Nội dung trung tâm bao gồm Section, Article và Aside -->
+        <div class="main-content">
+            <div class="content-left">
+                <section>
+                    &lt;section&gt;
+                </section>
+
+                <article>
+                    &lt;article&gt;
+                </article>
+            </div>
+
+            <aside>
+                &lt;aside&gt;
+            </aside>
+        </div>
+
+        <!-- Phần Chân trang Footer -->
+        <footer>
+            &lt;footer&gt;
+        </footer>
+    </div>
+
+</body>
+</html>
