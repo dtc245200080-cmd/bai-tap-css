@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Simple Layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            padding-top: 60px; /* Tạo khoảng trống bằng chiều cao Header để không bị che nội dung */
+        }
+
+        /* 1. FIXED HEADER */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 56px;
+            background-color: #ffffff;
+            border-bottom: 1px solid #cccccc;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 16px;
+            z-index: 1000;
+        }
+
+        .header-logo {
+            color: #1877f2;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .header-search input {
+            padding: 8px 12px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            outline: none;
+            background-color: #f0f2f5;
+        }
+
+        .header-user {
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* CONTAINER CHÍNH CHỨA 3 CỘT */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 10px;
+            gap: 20px;
+        }
+
+        /* 2. SIDEBAR TRÁI */
+        .sidebar-left {
+            width: 250px;
+            position: fixed;
+            top: 76px;
+            left: calc((100% - 1200px) / 2); /* Căn chỉnh vị trí cố định theo container */
+        }
+
+        .sidebar-menu {
+            list-style: none;
+        }
+
+        .sidebar-menu li {
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            color: #050505;
+            cursor: pointer;
+            margin-bottom: 5px;
+        }
+
+        .sidebar-menu li:hover {
+            background-color: #e4e6eb;
+        }
+
+        /* 3. PHẦN NỘI DUNG CHÍNH (MAIN FEED) */
+        .main-feed {
+            flex: 1;
+            margin-left: 270px; /* Đẩy sang phải để không chèn lên Left Sidebar */
+            margin-right: 270px; /* Đẩy sang trái để không chèn lên Right Sidebar */
+        }
+
+        .post-create, .post-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .post-create input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 20px;
+            border: 1px solid #ddd;
+            outline: none;
+            background-color: #f0f2f5;
+        }
+
+        .post-author {
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .post-content {
+            color: #333;
+            line-height: 1.4;
+        }
+
+        /* 4. SIDEBAR PHẢI */
+        .sidebar-right {
+            width: 250px;
+            position: fixed;
+            top: 76px;
+            right: calc((100% - 1200px) / 2);
+        }
+
+        .sidebar-right h4 {
+            color: #65676b;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- FIXED HEADER -->
+    <header>
+        <div class="header-logo">facebook</div>
+        <div class="header-search">
+            <input type="text" placeholder="Tìm kiếm trên Facebook">
+        </div>
+        <div class="header-user">Người dùng</div>
+    </header>
+
+    <!-- TRANG NỘI DUNG BAO GỒM SIDEBAR VÀ FEED -->
+    <div class="container">
+        
+        <!-- SIDEBAR TRÁI -->
+        <aside class="sidebar-left">
+            <ul class="sidebar-menu">
+                <li>👤 Trang cá nhân</li>
+                <li>👥 Bạn bè</li>
+                <li>⏰ Kỷ niệm</li>
+                <li>🔖 Đã lưu</li>
+                <li>👨‍👩‍👧‍👦 Nhóm</li>
+                <li>🏪 Marketplace</li>
+            </ul>
+        </aside>
+
+        <!-- NỘI DUNG CHÍNH (NEWS FEED) -->
+        <main class="main-feed">
+            <div class="post-create">
+                <input type="text" placeholder="Bạn đang nghĩ gì thế?">
+            </div>
+
+            <div class="post-card">
+                <div class="post-author">Nguyễn Văn A</div>
+                <div class="post-content">Hôm nay thời tiết đẹp quá! Chúc mọi người một ngày làm việc hiệu quả.</div>
+            </div>
+
+            <div class="post-card">
+                <div class="post-author">CodeGym Vietnam</div>
+                <div class="post-content">Thực hành CSS Layout thành công với Flexbox và Position Fixed.</div>
+            </div>
+
+            <div class="post-card">
+                <div class="post-author">Lập trình viên</div>
+                <div class="post-content">Hello World! Đã hoàn thành xong giao diện trang chủ Facebook giản lược.</div>
+            </div>
+        </main>
+
+        <!-- SIDEBAR PHẢI -->
+        <aside class="sidebar-right">
+            <h4>Người liên hệ</h4>
+            <ul class="sidebar-menu">
+                <li>🟢 Trần Văn B</li>
+                <li>🟢 Lê Thị C</li>
+                <li>🟢 Phạm Văn D</li>
+            </ul>
+        </aside>
+
+    </div>
+
+</body>
+</html>
