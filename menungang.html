@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Thực hành] Tạo menu ngang</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        /* Khối menu chính */
+        #menu {
+            height: 30px;
+            padding: 0;
+            margin: 0;
+            background-color: #000000;
+            border: 1px solid #CDCDCD;
+        }
+
+        #menu ul, #menu li {
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Định dạng các mục menu nằm ngang */
+        #menu li {
+            position: relative;
+            float: left;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Định dạng liên kết trong menu */
+        #menu li a {
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            font-size: 13px;
+            color: #FFFFFF;
+        }
+
+        /* Đổi màu nền khi rê chuột vào */
+        #menu li:hover > a {
+            background-color: #00CCFF;
+            color: #000000;
+        }
+
+        /* Định dạng Submenu (Menu thả xuống) */
+        #menu ul ul {
+            position: absolute;
+            top: 30px;
+            left: 0;
+            visibility: hidden;
+            background-color: #000000;
+        }
+
+        #menu ul ul li {
+            float: none;
+        }
+
+        /* Hiển thị submenu khi rê chuột vào li cha */
+        #menu ul li:hover ul {
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="menu">
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li>
+                <a href="#">Sản phẩm</a>
+                <ul>
+                    <li><a href="#">Máy tính</a></li>
+                    <li><a href="#">Điện thoại</a></li>
+                    <li><a href="#">Tivi</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Dịch vụ</a>
+                <ul>
+                    <li><a href="#">Sửa chữa</a></li>
+                    <li><a href="#">Bảo hành</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Tin tức</a></li>
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
