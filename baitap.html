@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập - Nhúng CSS vào trang HTML</title>
+    
+    <!-- Phần 2: Internal-style (CSS viết trong thẻ <style> ở head) -->
+    <style>
+        .internal-h1 {
+            color: green;
+        }
+        .internal-p {
+            color: blue;
+        }
+    </style>
+
+    <!-- Phần 3: External-style (Nếu tách file riêng sẽ dùng: <link rel="stylesheet" href="style.css">) -->
+    <style>
+        /* Mô phỏng các selector sử dụng file CSS ngoài */
+        .external-h1 {
+            color: green;
+        }
+        .external-p {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Phần 1: Sử dụng Inline-style</h2>
+    <h1 style="color: green;">This is heading 1</h1>
+    <p style="color: blue;">This is an ordinary paragraph. Notice that this text is blue. The default text color for a page is defined in the body selector.</p>
+
+    <hr>
+
+    <h2>Phần 2: Sử dụng Internal-style</h2>
+    <h1 class="internal-h1">This is heading 1</h1>
+    <p class="internal-p">This is an ordinary paragraph. Notice that this text is blue. The default text color for a page is defined in the body selector.</p>
+
+    <hr>
+
+    <h2>Phần 3: Sử dụng External-style</h2>
+    <h1 class="external-h1">This is heading 1</h1>
+    <p class="external-p">This is an ordinary paragraph. Notice that this text is blue. The default text color for a page is defined in the body selector.</p>
+
+</body>
+</html>
